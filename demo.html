@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/index.css">
+    <title>demo</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            align-items: center;
+            text-align: center;
+            align-items: center;
+            display: flex;
+            justify-content: center;
+            /* height: 300vh; */
+            /* background: #000; */
+        }
+
+        h1 {
+            color: #00ff2a;
+            font-size: 11em;
+        }
+
+        h1 span {
+            display: table-cell;
+            animation: animate 2s linear infinite;
+        }
+
+        h1 span:nth-child(1) {
+            animation-delay: 0s;
+        }
+
+        h1 span:nth-child(2) {
+            animation-delay: 0.40s;
+        }
+
+        h1 span:nth-child(3) {
+            animation-delay: 0.80s;
+        }
+
+        h1 span:nth-child(4) {
+            animation-delay: 1.2s;
+        }
+
+        h1 span:nth-child(5) {
+            animation-delay: 1.6s;
+        }
+
+        @keyframes animate {
+
+            0%,
+            100% {
+                position: relative;
+                top: 10%;
+                color: #00b3ff;
+                filter: blur(2px);
+            }
+
+            5%,
+            95% {
+                position: relative;
+                top: 50%;
+                color: #111;
+                filter: blur(2px);
+                text-shadow: none;
+            }
+
+            50%,
+            40% {
+                position: relative;
+                left: 5%;
+                color: #00ff2a;
+                filter: blur(2px);
+            }
+        }
+
+        .o1 {
+            position: fixed;
+            clip-path: polygon(0 0, 100% 0, 100% 20%, 0 80%);
+            background-image: linear-gradient(#4c484d, #e1a6fcbe);
+            height: 100%;
+            width: 100%;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .o2 {
+            clip-path: polygon(0 100%, 100% 100%, 100% 20%, 0 80%);
+            background-image: linear-gradient(#f80a6da8, #353638be);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="o1">
+
+    </div>
+    <div class="o1 o2">
+
+    </div>
+    <h1>
+        <span>H</span>
+        <span>e</span>
+        <span>l</span>
+        <span>l</span>
+        <span>o</span>
+    </h1>
+</body>
+
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>index</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+    <div class="bg">
+        <audio id="audio" autoplay></audio>
+        <p>Sender</p>
+        <div class="user">
+            <span>Y</span>
+        </div>
+    </div>
+    <div class="text">
+        <p>Reciver</p>
+    </div>
+    <div class="reciver">
+        <span>V</span>
+    </div>
+    <div class="container">
+        <div class="top">
+            <p> &#8377;3000</p>
+            <p>Transaction ID :- <span id="transaction_id"></span></p>
+            <p>Date:- <span id="Date"></span></p>
+        </div>
+        <div class="mid">
+            <p>Sender ID :- <span>202132312122</span></p> <!-- All id is selected by backend -->
+            <p>From:<span> Abcd Xyz</span> </p>
+            <p>Reciver ID :- <span>265366271829</span></p>
+            <p>To: <span> Pqrs Mnop</span> </p>
+            <p>Remark: <span>For Demo </span></p>
+        </div>
+        <div class="bottom">
+            <p id="payment_status"></p>
+            <span id="payment_msg"></span>
+
+        </div>
+        <button onclick="print()">print</button>
+    </div>
+    </div>
+</body>
+
+</html>
+<script>
+    let success = true; //this is decided by backend 
+    // let success = false;
+    let today = new Date();
+    let date = today.getDate() + '-' + (today.getMonth() + 1) + '-' + today.getFullYear()
+    document.getElementById('Date').innerHTML = date;
+    if (success == true) {
+        document.getElementById('audio').setAttribute('src', "/Success.mp3");
+        document.getElementById('transaction_id').innerHTML = 202132312122;
+        document.getElementById('payment_status').innerHTML = 'Payment Success';
+        document.getElementById('payment_msg').innerHTML = 'you have successfully completed your transaction';
+    }
+    else {
+        document.getElementById('audio').setAttribute('src', '/error.mp3');
+        document.getElementById('payment_status').innerHTML = 'Payment Unuccess';
+        document.getElementById('payment_status').style.color = 'red';
+        document.getElementById('payment_msg').innerHTML = 'oops!... , Something is wrong during transaction';
+    }
+
+    function print() {
+        Window.print;
+    }
+</script>

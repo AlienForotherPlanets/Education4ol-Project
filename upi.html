@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/main.css">
+</head>
+
+<body>
+    <video id="bgvideo" autoplay loop>
+        <source src="/bgvideo.mp4" type="video/mp4">
+    </video>
+    <a href="#" class="htu1">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        How to use<br /><br />
+        <p>&gt;Hover your mouse over logos to see form</p><br />
+        <p>&gt;Enter correct upi id and go to verify and pay</p><br />
+    </a>
+    <div class="outer1">
+    </div>
+    <div class="outer1 outer2"></div>
+    <div class="demo">
+        <div class="font">
+            <div class="top">
+                <p>UPI</p>
+            </div>
+            <div class="upi">
+                <p>
+                    UPI ID
+                </p>
+                <div class="focus line">
+                    <input id="upiid" type="text" class="focus" name="upiid" placeholder="abcd@1234">
+                    <div id="wrong_upiid" class="wrongMessage">
+                        UPI Id is required
+                    </div>
+                </div>
+            </div>
+            <a href="/varify.html"> <button class="bottom-box verify">verify and pay</button> </a>
+        </div>
+        <div class="end">
+            <img src="/gpay.jpg" class="btn1 e1">
+            <img src="/paytm.jfif" class="btn1 e2">
+            <img src="/bhim.jfif" class="btn1 e3">
+            <img src="/phonepe.png" class="btn1 e4">
+        </div>
+    </div>
+</body>
+
+</html>
+<script>
+    function verifyandpay() {
+        let upiid = document.getElementById("upiid").value;
+        let result = true;
+        if (upiid == "") {
+            document.getElementById("wrong_upiid").style.display = "block";
+            result = false;
+        } else {
+            document.getElementById("wrong_upiid").style.display = "none";
+        }
+        if (result == true) {
+            window.location.href = "varify.html";
+        }
+    }
+</script>

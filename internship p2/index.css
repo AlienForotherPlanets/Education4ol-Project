@@ -1,0 +1,204 @@
+body {
+    padding: 0;
+    margin: 0;
+    font-family: 'Castoro', serif;
+}
+
+.user {
+    position: absolute;
+    height: 10rem;
+    width: 10rem;
+    background-color: white;
+    z-index: 2;
+    border-radius: 50%;
+    top: 3rem;
+    left: 3rem;
+    animation: animate 2s linear;
+}
+
+.user span {
+    position: absolute;
+    font-size: 7.5rem;
+    left: 2.3rem;
+    top: 0.7rem;
+    color: black;
+    animation: animate 2s steps(1);
+}
+
+.reciver {
+    position: absolute;
+    height: 10rem;
+    width: 10rem;
+    background-color: black;
+    z-index: 2;
+    border-radius: 50%;
+    bottom: 3rem;
+    right: 3rem;
+    animation: animate 2.5s linear;
+}
+
+.reciver span {
+    position: absolute;
+    font-size: 7.5rem;
+    right: 2.3rem;
+    bottom: 0.7rem;
+    color: white;
+    animation: animate 2.5s steps(1);
+}
+
+.bg {
+    clip-path: polygon(0 0, 100% 0, 0 100%);
+    background-color: black;
+    height: 100vh;
+}
+
+.bg p {
+    position: absolute;
+    color: white;
+    font-size: 2.5rem;
+    top: 12rem;
+    left: 4.2rem;
+    animation: animate 2s steps(1);
+}
+
+.text p {
+    position: absolute;
+    font-size: 2.5rem;
+    bottom: 12rem;
+    right: 4.5rem;
+    animation: animate 2.5s steps(1);
+}
+
+.container {
+    position: absolute;
+    clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 75% 75%, 75% 100%, 50% 75%, 0% 75%);
+    background: linear-gradient(180deg, rgb(53, 208, 236), #262626);
+    height: 37rem;
+    width: 40rem;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 1;
+    animation: animate 2s linear;
+}
+
+.container p {
+    font-size: 1.2rem;
+}
+
+.container button {
+    width: 7rem;
+    height: 2rem;
+    border: none;
+    border-radius: 2rem;
+    background: linear-gradient(0deg, rgb(53, 208, 236), #262626);
+    color: white;
+    position: absolute;
+    right: 10.5rem;
+    bottom: 7rem;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.container button:hover {
+    color: black;
+    background: white;
+}
+
+.top p:nth-child(1){
+    padding-left: 17rem;
+    padding-right: 10rem;
+    font-size: 2.3rem;
+    color: red;
+}
+.top{
+    display: flex;
+    flex-flow:row ;
+    flex-wrap: wrap;
+}
+.top p{
+    padding-right: 2rem;
+    padding-left: 2rem; 
+    font-size: 1.5rem;
+    color: darkviolet;
+}
+
+.top p span{
+    color: wheat;
+}
+
+.mid{
+    display: flex;
+    flex-flow:row ;
+    flex-wrap: wrap;
+}
+
+.mid p {
+    padding-right: 3rem;
+    padding-left: 3rem; 
+    color: black;
+}
+
+.mid p span{
+    color: white;
+    font-size: 1.3rem;
+}
+.bottom{
+    margin: 0;
+    padding: 0;
+    display: flexbox;
+    position: absolute;
+    bottom: 8.4rem;
+}
+
+.bottom p{
+    padding-left: 13rem;
+    color: yellow;
+    font-size: 2rem;
+}
+
+.bottom span{   
+    padding-left: 7rem;
+    color: yellowgreen;
+    position: relative;
+    bottom: 1rem;
+    font-size: 1.3rem;
+}
+@keyframes animate {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@media screen and (max-width:1060px) {
+    html {
+        font-size: 70%;
+    }
+}
+
+@media screen and (max-width:750px) {
+    html {
+        font-size: 50%;
+    }
+}
+
+@media screen and (max-width:300px) {
+    html {
+        font-size: 30%;
+    }
+
+    .bg p {
+        top: 4rem;
+        left: 15rem;
+    }
+
+    .text p {
+        right: 14rem;
+        bottom: 4rem;
+    }
+
+}

@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-shadow: border-box;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: #000;
+            animation: slide 3s linear;
+        }
+
+        @keyframes slide {
+            10% {
+                background: white;
+            }
+        }
+
+        .loader {
+            position: relative;
+            top: 100%;
+            left: 2rem;
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            background: linear-gradient(45deg, transparent, transparent 40%,
+                    #e5f403);
+            animation: animate 2s linear infinite;
+        }
+
+        @keyframes animate {
+            0% {
+                transform: rotate(0deg);
+                background: linear-gradient(45deg, transparent, transparent 40%,
+                        #e5f403);
+            }
+
+            10% {
+                background: linear-gradient(45deg, transparent, transparent 40%,
+                        rgb(231, 229, 84));
+
+            }
+
+            20% {
+                background: linear-gradient(45deg, transparent, transparent 40%,
+                        yellowgreen);
+
+            }
+
+            30% {
+                background: linear-gradient(45deg, transparent, transparent 40%,
+                        turquoise);
+            }
+
+            40% {
+                background: linear-gradient(45deg, transparent, transparent 40%,
+                        tomato);
+            }
+
+            50% {
+                background: linear-gradient(45deg, transparent, transparent 40%,
+                        violet);
+            }
+
+            60% {
+                background: linear-gradient(45deg, transparent, transparent 40%,
+                        #9982ee);
+
+            }
+
+            70% {
+                background: linear-gradient(45deg, transparent, transparent 40%,
+                        #ee82ce);
+
+            }
+
+            80% {
+                background: linear-gradient(45deg, transparent, transparent 40%,
+                        #9bee82);
+
+            }
+
+            90% {
+                background: linear-gradient(45deg, transparent, transparent 40%,
+                        #e3ee82);
+
+            }
+
+            100% {
+                transform: rotate(360deg);
+                background: linear-gradient(45deg, transparent, transparent 40%,
+                        #e5f403);
+            }
+        }
+
+        .loader:before {
+            content: "";
+            position: absolute;
+            top: 6px;
+            left: 6px;
+            right: 6px;
+            bottom: 6px;
+            background: #000;
+            border-radius: 50%;
+            z-index: 1000;
+        }
+
+        .loader::after {
+            content: "";
+            position: absolute;
+            left: 0px;
+            top: 0px;
+            bottom: 0px;
+            right: 0px;
+            background: #000;
+            border-radius: 50%;
+            background: linear-gradient(45deg, transparent, transparent 40%,
+                    #e5f403);
+            z-index: 1;
+            filter: blur(30px);
+        }
+
+        .check {
+            clip-path: polygon(0 0, 100% 0, 0 100%, 100% 100%);
+            background-image: linear-gradient(#a8f115, #d9ee7abe);
+            position: relative;
+            width: 70px;
+            height: 70px;
+            z-index: 2000;
+            left: -4.8rem;
+            animation: done 3s linear infinite;
+        }
+
+        @keyframes done {
+            0% {
+                background: black;
+                transform: rotate(0deg);
+            }
+
+            10% {
+                background: rgb(231, 229, 84);
+                transform: rotate(36deg);
+            }
+
+            20% {
+                background: yellowgreen;
+                transform: rotate(72deg);
+            }
+
+            30% {
+                background: turquoise;
+                transform: rotate(108deg);
+            }
+
+            40% {
+                background: tomato;
+                transform: rotate(144deg);
+            }
+
+            50% {
+                background: violet;
+                transform: rotate(180deg);
+            }
+
+            60% {
+                background: #9982ee;
+                transform: rotate(216deg);
+            }
+
+            70% {
+                background: #ee82ce;
+                transform: rotate(252deg);
+            }
+
+            80% {
+                background: #9bee82;
+                transform: rotate(288deg);
+            }
+
+            90% {
+                background: #e3ee82;
+                transform: rotate(324deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="loader">
+    </div>
+    <div class="check">
+    </div>
+</body>
+
+</html>
+<script>
+    setTimeout(function () {
+        window.location.href = "index_1.html";
+    }, 5000);
+</script>

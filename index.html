@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>payment</title>
+    <link rel="stylesheet" href="/main.css">
+    <script src="/main.js" type="text/javascript"></script>
+</head>
+
+<body>
+    <video id="bgvideo" autoplay loop>
+        <source src="/bgvideo.mp4" type="video/mp4">
+    </video>
+    <a href="#" class="htu1">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        How to use<br /><br />
+        <p>&gt;Hover your mouse over logos to see form</p><br />
+        <p>&gt;Enter amount and it's Discription and select option for payment</p><br />
+    </a>
+    <div class="outer1">
+    </div>
+    <div class="outer1 outer2"></div>
+    <div class="demo mid">
+        <div class="font">
+            <div class="top">
+                <br />
+                <span class="hl">W</span><span class="nm">elcome</span> &nbsp;<span class="hl">T</span>
+                <span class="nm">o</span>&nbsp;&nbsp;<span class="hl">M</span><span class="nm">ypay</span>
+            </div><br />
+            Amount To Pay<br /><br />
+            <input type="text" id="amount"
+                onkeypress="return (event.charCode !=8 && event.charCode ==0 || ( event.charCode == 46 || (event.charCode >= 48 && event.charCode <= 57)))"
+                class="line" autofocus><br />
+            <div id="wrong_amount" class="wrongMessage">
+                Amount is required
+            </div><br />
+            Add a Discription<br /><br />
+            <input id="desctiption" type="text" id="note" class="line"><br />
+            <div id="wrong_description" class="wrongMessage">
+                description is required
+            </div><br />
+            select payment method
+            <div class="bottom-box">
+                <button onclick="upi(), amount()"><img src="/upi_qr.jpg" class="btn b1"></button>
+                <button onclick="bank(), amount()"><img src="card.jpg" class="btn b2"></button>
+                <button onclick="varify(), amount()"><img src="/wallet.png" class="btn b3"></button>
+            </div>
+        </div>
+        <div class="end">
+            <img src="/gpay.jpg" class="btn1 e1">
+            <img src="/paytm.jfif" class="btn1 e2">
+            <img src="/bhim.jfif" class="btn1 e3">
+            <img src="/phonepe.png" class="btn1 e4">
+        </div>
+    </div>
+    <footer></footer>
+    <script>
+    </script>
+</body>
+
+</html>
+
+<script>
+
+</script>
